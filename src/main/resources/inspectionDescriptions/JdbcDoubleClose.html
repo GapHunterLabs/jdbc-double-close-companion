@@ -1,0 +1,11 @@
+<html>
+<body>
+Reports a <code>close()</code> on a JDBC resource (<code>Connection</code>, <code>Statement</code>,
+<code>PreparedStatement</code>, <code>CallableStatement</code>, <code>ResultSet</code>) that is reached with the resource
+already closed, on every path or on some path, and a use of a resource that is already closed on every path.
+<!-- tooltip end -->
+<p>The analysis follows the possible states of each resource through <code>if</code>/<code>else</code>,
+<code>try</code>/<code>catch</code> and loops, merging both branches, so a path-dependent double close is reported
+separately from a certain one.</p>
+</body>
+</html>
